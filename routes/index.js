@@ -12,7 +12,7 @@ router.get('/login', function(req, res, next) {
 
 router.get('/login-suc', function(req, res, next) {
   //console.log(req);
-  res.render('index', { title: '美仓众筹',username:req.query.username});
+  res.render('index', { title: '美仓众筹'});
 });
 
 router.get('/reg-start', function(req, res, next) {

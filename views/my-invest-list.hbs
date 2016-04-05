@@ -1,14 +1,16 @@
+<div class="page-group">
+    <div id="page-invest-list" class="page page-current my-white-bg">
 <header class="my-header-default">
     <div class=" my-login-header">
     	<span class="pull-left">
-         Hi,用户名  <a href="#">退出</a>
+         Hi,用户名  <a href="/">退出</a>
         </span>
     </div>
 </header>
 
 <nav class="my-border-bottom">
     <div class="my-wp-1200">
-        <a href="#" class="my-logo">美仓众筹</a>
+        <a href="/login-suc" class="my-logo">美仓众筹</a>
         <ul class="nav nav-pills pull-right">
 
             <li role="presentation" class="active"><a href="../login-suc">首页</a></li>
@@ -159,7 +161,7 @@
             </td> <td width="8%" valign="top">2份</td><td width="8%" valign="top">2%</td>
             <td width="12%" valign="top">5.00万元</td>
             <td width="10%" valign="top">已支付</td>
-            <td width="12%" valign="top"><a href="my-process-view"><button type="button" class="btn btn-default">查看项目进度</button></a>
+            <td width="12%" valign="top"><button type="button" class="btn btn-default" id="view-invest-process">查看项目进度</button>
             </td>
         </tr>
     </table>
@@ -200,7 +202,8 @@
     <p class="my-p-footer">友情链接 - <a href="#">美仓供应链</a><br>
         ©2015 xxxxxx众筹网络科技有限公司 zhongchou.com 版权所有 xxICP证1xxxxxxxx号</p>
 </footer>
-
+</div></div>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/my.js"></script>
+<script type='text/javascript' src='../js/lib/requirejs.min.js' data-main='/js/controller/users-ctrl' ></script>

@@ -22,7 +22,8 @@ html, body {height: 100%; font-family:Microsoft YaHei;}
 .my-mar-b50{ margin-bottom:50px;}
 
 .my-border-bottom{ border-bottom:1px solid #cecece;}
-
+.my-gray-text{ color:#999 !important;}
+.my-black-text{ color:#333 !important;}
 
 .ui-icon,
 nav .my-logo,
@@ -232,7 +233,7 @@ footer.my-footer-home{position:fixed; bottom:40px; height:auto; background:none;
 .cart-title-box .ui-nav-item .ui-nav-item-order{ display:inline-block; height:34px; min-width:36px; background-position:20px -420px; padding-left:10px; font-weight:bold; }
 
 .cart-title-box .ui-nav-item-current {  background:#5b5a60; color:#fff;}
-.cart-title-box .ui-nav-item-current .ui-nav-item-order{ background-position:20px -297px;overflow:hidden;}
+.cart-title-box .ui-nav-item-current .ui-nav-item-order{ background-position:20px -297px;}
 
 .my-box{ border:1px solid #dfdfdf; padding:30px; margin-bottom:50px;}
 .my-booking-box{ width:501px; margin:0 auto;}
@@ -251,7 +252,7 @@ footer.my-footer-home{position:fixed; bottom:40px; height:auto; background:none;
 .my-top-login a:last-child{ padding-right:0;}
 
 .ui-reg-form{ width:492px; margin:0 auto;}
-.ui-reg-form .ui-input{ float:left; padding:6px 9px; width:308px;}
+.ui-reg-form .ui-input{ float:left; padding:6px 9px; width:284px;}
 .ui-reg-form .ui-label{ padding-right:10px; width:90px;}
 .ui-reg-form .ui-vertify .ui-input{ width:168px;}
 .ui-reg-form .ui-vertify .ui-vertify-button{ float:left;margin-left:10px;line-height: 18px; border: 1px solid #d1dbe4; color:#333;}

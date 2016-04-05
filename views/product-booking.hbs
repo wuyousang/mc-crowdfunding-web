@@ -3,14 +3,14 @@
 <header class="my-header-default">
     <div class=" my-login-header">
     	<span class="pull-left">
-         Hi,用户名  <a href="#">退出</a>
+         Hi,用户名  <a href="/">退出</a>
         </span>
     </div>
 </header>
 
 <nav class="my-border-bottom">
     <div class="my-wp-1200">
-        <a href="#" class="my-logo">美仓众筹</a>
+        <a href="/login-suc" class="my-logo">美仓众筹</a>
         <ul class="nav nav-pills pull-right">
 
             <li role="presentation" class="active"><a href="../login-suc">首页</a></li>
@@ -55,13 +55,13 @@
                         <label for="inputPassword2" class="sr-only">订购数量</label>
                         <input type="text" class="form-control input-sm" id="inputPassword2" v-model="inputPassword2">
                     </div>
-                    <span>件</span>
+                    <span>件</span><label id="product-amount-label"></label>
                 </form>
                 <div class="my-form-item">
-                    <label>单价</label><span class="my-text-blue">55.5元</span>
+                    <label>单价</label><span class="my-text-blue" v-model="price">55.5元</span>
                 </div>
                 <div class="my-form-item">
-                    <label>需付金额</label><span class="my-text-red">5500元</span>
+                    <label>需付金额</label><span class="my-text-red" v-model="total_price">5500元</span>
                 </div>
             </div>
 
@@ -71,11 +71,10 @@
                     xxxxxxx</p>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" checked>我已详细阅读并同意
+                        <input type="checkbox" id="check-pro" v-model="check_pro" checked>我已详细阅读并同意 <label id="check_pro-label"></label>
                     </label>
                 </div>
             </div>
-
             <p v-cloak class="my-text-center my-text-gray"><button type="button" class="btn btn-long btn-dark" id="submit-product-booking">提交订单</button></p>
         </div>
     </div>

@@ -2,9 +2,9 @@
     <div id="page-reg-info" class="page page-current my-white-bg">
 <nav class="my-border-bottom">
     <div class="my-wp-1200">
-        <a href="#" class="my-logo">美仓众筹</a>
+        <a href="/" class="my-logo">美仓众筹</a>
         <div class="my-top-login pull-right">
-            <a href="#">登录</a>  | <a href="#">注册</a>
+            <a href="login">登录</a>  | <a href="reg-start">注册</a>
         </div>
     </div>
 </nav>
@@ -36,16 +36,16 @@
     <div class="my-box">
         <form class="ui-form ui-reg-form" name="" >
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 姓名</label> <input type="text" class="ui-input ui-no-tborder ui-address-name ui-login-name" validate="{required:'请填写手机号'}"  placeholder="请填写你的真实姓名" v-model="name">
+                <label class="ui-label"><span class="ui-text-red">*</span> 姓名</label> <input type="text" class="ui-input ui-no-tborder ui-address-name ui-login-name" validate="{required:'请填写手机号'}"  placeholder="请填写你的真实姓名" v-model="name"><label id="name"></label>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 身份证号</label> <input name="" type="text" validate="{required:'请输入微信号'}" class="ui-input" placeholder="请填写与姓名相符的身份证号码" v-model="id"/>
+                <label class="ui-label"><span class="ui-text-red">*</span> 身份证号</label> <input name="" type="text" validate="{required:'请输入微信号'}" class="ui-input" placeholder="请填写与姓名相符的身份证号码" v-model="id"/><label id="id"></label>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label"> 邮箱</label> <input type="text" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请填写你的邮箱地址',email:true}" placeholder="请填写你的邮箱地址"  v-model="email">
+                <label class="ui-label"> 邮箱</label> <input type="text" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请填写你的邮箱地址',email:true}" placeholder="请填写你的邮箱地址"  v-model="email"><label id="email"></label>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label">QQ</label> <input type="text" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请填写你的QQ',number:true}" placeholder="请填写你的QQ"  v-model="qq">
+                <label class="ui-label">QQ</label> <input type="text" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请填写你的QQ',number:true}" placeholder="请填写你的QQ"  v-model="qq"><label id="qq"></label>
             </div>
             <div class="ui-form-item p-item">
                 <label class="ui-label"><span class="ui-text-red">*</span> 所在地区</label>
@@ -64,7 +64,7 @@
                 </select>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 详细地址</label> <input type="text" class="ui-input ui-no-tborder ui-address-name ui-login-name" validate="{required:'请填写详细地址'}"  placeholder="请填写详细地址" v-model="address">
+                <label class="ui-label"><span class="ui-text-red">*</span> 详细地址</label> <input type="text" class="ui-input ui-no-tborder ui-address-name ui-login-name" validate="{required:'请填写详细地址'}"  placeholder="请填写详细地址" v-model="address"><label id="address"></label>
             </div>
             <p  class="my-text-center my-mar-t30"><button type="button" class="btn btn-long btn-dark" id="reg-info-next">下一步</button></p>
         </form>

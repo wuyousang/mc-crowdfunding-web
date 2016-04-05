@@ -21,8 +21,11 @@ require(['Vue'],
         $(document).ready(function(){
             /*去支持*/
             $("#detail-to-join").click(function () {
-                alert('aaaaaaaaaa');
-                location.href = '../invest/invest-ongoing';
+                location.href = '/invest/invest-ongoing';
+            });
+            /*查看项目进度*/
+            $("#view-invest-process").click(function () {
+                location.href = '../users/my-process-view';
             });
         });
     });

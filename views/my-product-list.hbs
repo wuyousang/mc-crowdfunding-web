@@ -1,14 +1,14 @@
 <header class="my-header-default">
     <div class=" my-login-header">
     	<span class="pull-left">
-         Hi,用户名  <a href="#">退出</a>
+         Hi,用户名  <a href="/">退出</a>
         </span>
     </div>
 </header>
 
 <nav class="my-border-bottom">
     <div class="my-wp-1200">
-        <a href="#" class="my-logo">美仓众筹</a>
+        <a href="/login-suc" class="my-logo">美仓众筹</a>
         <ul class="nav nav-pills pull-right">
 
             <li role="presentation" class="active"><a href="../login-suc">首页</a></li>
@@ -164,7 +164,7 @@
             <td width="12%" valign="top">500件</td>
             <td width="12%" valign="top">5.00万元</td>
             <td width="12%" valign="top">已支付</td>
-            <td width="12%" valign="top"><button type="button" class="btn btn-default">查看项目进度</button>
+            <td width="12%" valign="top"><button type="button" class="btn btn-default" id="view-product-process">查看项目进度</button>
             </td>
         </tr>
     </table>
@@ -211,3 +211,4 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/my.js"></script>
+<script type='text/javascript' src='../js/lib/requirejs.min.js' data-main='/js/controller/product-ctrl' ></script>

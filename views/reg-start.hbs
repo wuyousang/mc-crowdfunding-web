@@ -2,7 +2,7 @@
     <div id="page-reg-start" class="page page-current my-white-bg">
 <nav class="my-border-bottom">
     <div class="my-wp-1200">
-        <a href="#" class="my-logo">美仓众筹</a>
+        <a href="/" class="my-logo">美仓众筹</a>
         <div class="my-top-login pull-right">
             <a href="login">登录</a>  | <a href="reg-start">注册</a>
         </div>
@@ -36,25 +36,27 @@
     <div class="my-box">
         <form class="ui-form ui-reg-form" name="" method="post" action="#">
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 手机号</label> <input type="text" class="ui-input ui-no-tborder ui-address-name ui-login-name" validate="{required:'请填写手机号',mobile:true}"  placeholder="可用于账号用户名以及激活码获取" v-model="phone" >
+                <label class="ui-label"><span class="ui-text-red">*</span> 手机号</label> <input type="text" class="ui-input ui-no-tborder ui-address-name ui-login-name" validate="{required:'请填写手机号',mobile:true}"  placeholder="可用于账号用户名以及激活码获取"  v-model="phone" > <label id="phone"></label>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 微信号</label> <input name="" type="text" validate="{required:'请输入微信号'}" class="ui-input" v-model="wechat"/>
+                <label class="ui-label"><span class="ui-text-red">*</span> 微信号</label> <input name="" type="text" validate="{required:'请输入微信号'}" class="ui-input" v-model="wechat"/><label id="wechat"></label>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 设置密码</label> <input type="password" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请输入密码'}" placeholder="可设置6~15位密码" v-model="password">
+                <label class="ui-label"><span class="ui-text-red">*</span> 设置密码</label> <input type="password" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请输入密码'}" placeholder="可设置6~15位密码" v-model="password"><label id="password"></label>
             </div>
             <div class="ui-form-item p-item">
-                <label class="ui-label"><span class="ui-text-red">*</span> 重置密码</label> <input type="password" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请输入密码'}"  v-model="repassword">
+                <label class="ui-label"><span class="ui-text-red">*</span> 重置密码</label> <input type="password" class="ui-input ui-no-tborder ui-login-psw" validate="{required:'请输入密码'}"  v-model="repassword"><label id="repassword"></label>
             </div>
             <div class="ui-form-item p-item ui-vertify">
-                <label class="ui-label"><span class="ui-text-red">*</span> 验证码</label> <input name="" type="text" validate="{required:'请输入验证码'}" class="ui-input" v-model="validate"/>
+                <label class="ui-label"><span class="ui-text-red">*</span> 验证码</label> <input name="" type="text" validate="{required:'请输入验证码'}" class="ui-input" v-model="validate"/><label id="validate"></label>
                 <a href="#" class="ui-vertify-button"><img src="images/demo/code-temp.gif"  alt=""/></a>  <a href="#" class="ui-a-vertify">换一张</a>
             </div>
             <div class="ui-form-item p-item ui-active">
-                <label class="ui-label"><span class="ui-text-red">*</span> 激活码</label> <input name="" type="text" validate="{required:'请输入激活码'}" class="ui-input" v-model="captcha"/>
-                <a href="#" class="ui-active-button">获取激活码</a>
+                <label class="ui-label"><span class="ui-text-red">*</span> 激活码</label> <input name="" type="text" validate="{required:'请输入激活码'}" class="ui-input" v-model="captcha"/><label id="captcha"></label>
+               <!-- <a href="#" class="ui-active-button">获取激活码</a>-->
+                <a v-cloak href="#" id="sendActiveCode" class="ui-active-button" :class= "{'my-black-text':!isSendCaptcha , 'my-gray-text':isSendCaptcha}">${captchaTip}</a>
             </div>
+            <p id="captchaMsg" class="my-gray-text" v-cloak>${captchaMsg}</p>
             <p v-cloak class="my-text-center my-mar-t30"><button type="button" class="btn btn-long btn-dark" id="reg-start-next">下一步</button></p>
     </form>
     </div>

@@ -36,4 +36,6 @@ router.get('/product-preheat', function(req, res, next) {
 router.get('/product-success', function(req, res, next) {
     res.render('product-success',{title:"美仓众筹"});
 });
+
+
 module.exports = router;

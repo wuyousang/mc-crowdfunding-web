@@ -1,6 +1,6 @@
 <nav class="my-border-bottom">
     <div class="my-wp-1200">
-        <a href="#" class="my-logo">美仓众筹</a>
+        <a href="/" class="my-logo">美仓众筹</a>
         <div class="my-top-login pull-right">
             <a href="login">登录</a>  | <a href="reg-start">注册</a>
         </div>
@@ -68,7 +68,7 @@
 
                     </div>
                     <div class="my-text-center">
-                        <a href="reg-success"><button type="button" class="btn btn-long btn-dark">提交</button></a>
+                        <button type="button" class="btn btn-long btn-dark" id="submit-reg-shop">提交</button>
                         <p >如有任何疑问，<a href="#">请联系客服</a></p>
                     </div>
                 </div>
@@ -78,19 +78,41 @@
                     <div class="ui-platform-item">
                         <h3>1.店铺信息</h3>
                         <div class="ui-form-item p-item">
-                            <label class="ui-label">店铺信息</label> <input name="" type="text" validate="{required:'请输入店铺信息'}" class="ui-input" />
+                            <label class="ui-label">店铺信息</label> <input name="" type="text" validate="{required:'请输入店铺信息'}" class="ui-input" id="shop-name"/>
                         </div>
                     </div>
                     <div class="ui-platform-item">
                         <h3>2.店铺资质信息</h3>
-                        <p><a href="#" class="ui-button-lnormal">上传营业执照</a></p>
-                        <p class="ui-text-999 pad-0">照片支持png,jpge,bmp格式，大小不超过5M</p>
+                        <p><input type="file" name="uploadFile" accept="image/png,image/jpeg,image/bmp,image/jpg" id="licence" value="上传营业执照">上传营业执照</input> <label id="licence-alert"></label> </p>
+
+                        <p class="ui-text-999 pad-0">照片支持png,jpeg,bmp格式，大小不超过5M</p>
                         <p>示例</p>
                         <p><img src="/images/sample-offlineshop.gif" width="604" height="496" alt=""/></p>
                     </div>
 
                     <div class="my-text-center">
-                        <a href="reg-success"><button type="button" class="btn btn-long btn-dark">提交</button></a>
+                        <button type="button" class="btn btn-long btn-dark" id="submit-reg-realshop">提交</button>
+                        <p >如有任何疑问，<a href="#">请联系客服</a></p>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="weiChat">
+                <div class="ui-reg-platform-box">
+                    <div class="ui-platform-item">
+                        <h3>1.微商信息</h3>
+                        <div class="ui-form-item p-item">
+                            <label class="ui-label">微商号 </label> <input name="" type="text" validate="{required:'请输入微商号'}" class="ui-input" id="weiChat-id"/>
+                        </div>
+                    </div>
+                    <div class="ui-platform-item">
+                        <h3>2.微商资质信息</h3>
+                        <p><input type="file" name="uploadFile" accept="image/png,image/jpeg,image/bmp" id="picture">上传微信相册截图</imput> <label id="picture-alert"></label></p>
+                        <p>示例</p>
+                        <p><img src="/images/sample-weishang.gif" width="604" height="549" alt=""/></p>
+                    </div>
+
+                    <div class="my-text-center">
+                        <button type="button" class="btn btn-long btn-dark" id="submit-reg-weiChat">提交</button>
                         <p >如有任何疑问，<a href="#">请联系客服</a></p>
                     </div>
                 </div>
@@ -99,43 +121,21 @@
             <div role="tabpanel" class="tab-pane" id="purchase">
                 <div class="ui-reg-platform-box">
                     <div class="ui-platform-item">
-                        <h3>1.微商信息</h3>
-                        <div class="ui-form-item p-item">
-                            <label class="ui-label">微商号 </label> <input name="" type="text" validate="{required:'请输入微商号'}" class="ui-input" />
-                        </div>
-                    </div>
-                    <div class="ui-platform-item">
-                        <h3>2.微商资质信息</h3>
-                        <p><a href="#" class="ui-button-lnormal">上传微信相册截图</a></p>
-                        <p>示例</p>
-                        <p><img src="/images/sample-weishang.gif" width="604" height="549" alt=""/></p>
-                    </div>
-
-                    <div class="my-text-center">
-                        <a href="reg-success"><button type="button" class="btn btn-long btn-dark">提交</button></a>
-                        <p >如有任何疑问，<a href="#">请联系客服</a></p>
-                    </div>
-                </div>
-
-            </div>
-            <div role="tabpanel" class="tab-pane" id="weiChat">
-                <div class="ui-reg-platform-box">
-                    <div class="ui-platform-item">
                         <h3>1.平台信息</h3>
                         <div class="ui-form-item p-item">
-                            <label class="ui-label">平台名称 </label> <input name="" type="text" validate="{required:'请输入企业名称'}" class="ui-input" />
+                            <label class="ui-label">平台名称 </label> <input name="" type="text" validate="{required:'请输入企业名称'}" class="ui-input" id="platform-name"/>
                         </div>
                     </div>
                     <div class="ui-platform-item">
                         <h3>2.采购资质信息</h3>
-                        <p><a href="#" class="ui-button-lnormal">上传工号牌照片</a></p>
+                        <p><input type="file" name="uploadFile" accept="image/png,image/jpeg,image/bmp" id="work-pic">上传工号牌照片</input> <label id="work-pic-alert"></label></p>
                         <p class="ui-text-999 pad-0">备注：能证明平台采购身份的证件，如：名片，桌牌等也可以</p>
                         <p>示例</p>
                         <p><img src="/images/sample-purchase.gif" width="604" height="409" alt=""/></p>
                     </div>
 
                     <div class="my-text-center">
-                      <a href="reg-success"><button type="button" class="btn btn-long btn-dark" >提交</button></a>
+                      <button type="button" class="btn btn-long btn-dark" id="submit-reg-purchase">提交</button>
                         <p >如有任何疑问，<a href="#">请联系客服</a></p>
                     </div>
                 </div>
@@ -156,3 +156,4 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/my.js"></script>
+<script type='text/javascript' src='/js/lib/requirejs.min.js' data-main='/js/controller/index-ctrl'></script>
